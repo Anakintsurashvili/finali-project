@@ -1,12 +1,16 @@
 body {
-    background-color: #1a1a2e; /* ფონი */
-    color: #fff; /* ტექსტი */
+    background-color: #1a1a2e;
+    color: #fff;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+    background-image: url(imiges/bg-stars.svg);
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .countdown-container {
@@ -46,6 +50,12 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #ffffff; /* დროის სექციის ტექსტი */
+}
+.social-media {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .social-media a {
