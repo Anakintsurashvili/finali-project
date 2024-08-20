@@ -31,7 +31,7 @@ h1 {
 }
 
 .time-section {
-    background-color: #292b45; /* დროის კონტეინერი */
+    background-color: #292b45; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -42,14 +42,14 @@ h1 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #ff4c60; /* ციფრები */
+    color: #ff4c60; 
 }
 
 .time-section span:last-child {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ffffff; /* დროის სექციის ტექსტი */
+    color: #ffffff;
 }
 .social-media {
     position: absolute;
