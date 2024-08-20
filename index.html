@@ -3,107 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1f1b30;
-            color: #fff;
-            text-align: center;
-            padding-top: 50px;
-            margin: 0;
-        }
-
-        .countdown-container {
-            font-size: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .countdown-box {
-            background-color: #32304b;
-            padding: 20px;
-            border-radius: 10px;
-            width: 120px;
-        }
-
-        .countdown-box span {
-            display: block;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        h1 {
-            margin-top: 20px;
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-
-        .social-icons {
-            margin-top: 40px;
-        }
-
-        .social-icons img {
-            width: 40px;
-            margin: 0 10px;
-        }
-    </style>
+    <title>Launch Countdown</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>WE'RE LAUNCHING SOON</h1>
-
     <div class="countdown-container">
-        <div class="countdown-box">
-            <div id="days">08</div>
-            <span>DAYS</span>
+        <h1>We're Launching Soon</h1>
+        <div class="countdown">
+            <div class="time-section">
+                <span id="days">08</span>
+                <span>Days</span>
+            </div>
+            <div class="time-section">
+                <span id="hours">23</span>
+                <span>Hours</span>
+            </div>
+            <div class="time-section">
+                <span id="minutes">55</span>
+                <span>Minutes</span>
+            </div>
+            <div class="time-section">
+                <span id="seconds">41</span>
+                <span>Seconds</span>
+            </div>
         </div>
-        <div class="countdown-box">
-            <div id="hours">23</div>
-            <span>HOURS</span>
-        </div>
-        <div class="countdown-box">
-            <div id="minutes">55</div>
-            <span>MINUTES</span>
-        </div>
-        <div class="countdown-box">
-            <div id="seconds">41</div>
-            <span>SECONDS</span>
+        <div class="social-media">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="pinterest-icon.png" alt="Pinterest"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
         </div>
     </div>
-
-    <div class="social-icons">
-        <img src="facebook-icon.png" alt="Facebook">
-        <img src="pinterest-icon.png" alt="Pinterest">
-        <img src="instagram-icon.png" alt="Instagram">
-    </div>
-
-    <script>
-        // Countdown logic (you can add your own target date)
-        var countdownDate = new Date().getTime() + (8 * 24 * 60 * 60 * 1000); // 8 days from now
-
-        var countdownFunction = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countdownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = ("0" + days).slice(-2);
-            document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
-            document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
-            document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
-
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.querySelector(".countdown-container").innerHTML = "LAUNCHED!";
-            }
-        }, 1000);
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
